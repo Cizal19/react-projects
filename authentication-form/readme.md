@@ -2,7 +2,7 @@
 
 A signup/signin react component form, built using the Material UI and integrated with React.js open source form library Formik and Yup for authentication.
 
-Note: This is a Vite, React and Typescript project bootstrapped using [Vite](https://vitejs.dev/guide/)
+Note: This is a React and Typescript project bootstrapped using [Vite](https://vitejs.dev/guide/)
 
 
 ## Demo
