@@ -1,6 +1,6 @@
 # Authentication form
 
-A signup/signin react component form, built using the Material UI and integrated with React.js open source form library Formik and Yup for authentication.
+A signup/signin react component form, built using the Material UI components and integrated with React.js open source form library Formik and Yup for authentication.
 
 Note: This is a React and Typescript project bootstrapped using [Vite](https://vitejs.dev/guide/)
 
@@ -54,6 +54,11 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
+
+## Docker
+
+Refer to https://javascript.plainenglish.io/step-by-step-guide-to-dockerize-react-app-created-using-vite-90772423f7fb to run the app in docker.
+
 
 
 
