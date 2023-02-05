@@ -15,8 +15,6 @@ import { Formik, useFormik } from "formik";
 import { SignUpFormSchema } from "../schemas/SignUpFormSchema";
 import { useNavigate } from "react-router-dom";
 
-// import Snackbar from '@mui/material/Snackbar';
-// import Alert from '@mui/material/Alert';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -28,8 +26,6 @@ const SignUp: React.FC = () => {
     document.title = 'Sign Up';
   }, [])
 
-
- // const [open, setOpen] = useState(false)
 
   let navigate = useNavigate();
   const routeChange = () => {
@@ -62,7 +58,6 @@ const SignUp: React.FC = () => {
     onSubmit: async (values, actions) => {
       localStorage.setItem("savedInfo", JSON.stringify(values))
       successNotify()
-      // setOpen(true)
       await new Promise((resolve) => setTimeout(resolve, 2000))
       actions.resetForm()
       routeChange()
@@ -124,7 +119,6 @@ const SignUp: React.FC = () => {
                     (errors.password && touched.password) && errors.password
                   }
                 />
-                {/* {(errors.password && touched.password) && <Typography color="red">{errors.password}</Typography>} */}
                 <TextField
                   margin="normal"
                   required
@@ -141,7 +135,6 @@ const SignUp: React.FC = () => {
                     (errors.confirmPassword && touched.confirmPassword) && errors.confirmPassword.slice(54, 75)
                   }
                 />
-                {/* {(errors.confirmPassword && touched.confirmPassword) && <Typography color="red">{errors.confirmPassword.slice(54, 75)}</Typography>} */}
               </Grid>
             </Grid>
             <Button
@@ -162,14 +155,6 @@ const SignUp: React.FC = () => {
           </Box>
         </Box>
         <ToastContainer />
-        {/* <Snackbar
-          open={open}
-          autoHideDuration={3000}
-        >
-          <Alert severity="success" sx={{ width: '100%' }}>
-            You have signed up successfully
-          </Alert>
-        </Snackbar> */}
       </Container>
     </ThemeProvider>
   );
