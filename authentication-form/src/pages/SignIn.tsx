@@ -18,8 +18,7 @@ import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-// import Snackbar from '@mui/material/Snackbar';
-// import Alert from '@mui/material/Alert';
+
 
 type FormValues = {
   email: string;
@@ -75,12 +74,6 @@ const SignIn = () => {
     });
   }
 
-  // const [open, setOpen] = useState(false)
-  // const [message, setMessage] = useState({
-  //   success: false,
-  //   text: "Invalid Email or Pasword"
-  // })
-
 
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
     initialValues: {
@@ -92,11 +85,6 @@ const SignIn = () => {
     onSubmit: async (values, actions) => {
       if ((values.email === savedInfo.email) && (values.password === savedInfo.password)) {
         successNotify()
-        // setOpen(true)
-        // setMessage({
-        //   success: true,
-        //   text: "Signed in successfully"
-        // })
         localStorage.setItem('isLoggedIn', JSON.stringify(true))
         await new Promise((resolve) => setTimeout(resolve, 3000))
         routeChange()
@@ -184,19 +172,6 @@ const SignIn = () => {
           </Box>
         </Box>
         <ToastContainer />
-        {/* <Snackbar
-          open={open}
-          autoHideDuration={2000}
-        >
-          {message.success ?
-            <Alert severity="success" sx={{ width: '100%' }}>
-              {message.text}
-            </Alert> :
-            <Alert severity="error" sx={{ width: '100%' }}>
-              {message.text}
-            </Alert>
-          }
-        </Snackbar> */}
       </Container>
     </ThemeProvider>
   )
