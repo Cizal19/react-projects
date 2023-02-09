@@ -1,6 +1,6 @@
 # Digital Business Card
 
-This is my first react project usint React.
+This is my first react project using React.
 
 Note: This is a React and JavaScript project bootstrapped using [Vite](https://vitejs.dev/guide/)
 
